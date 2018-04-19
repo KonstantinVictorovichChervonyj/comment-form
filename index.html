@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+	<title>Test</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="avatar-container">
+			<img src="./img/avatar.png" alt="avatar">
+			<div class="avatar-container-text">
+				<h1>Вероника Ростова</h1>
+				<p>Менеджер по продажам</p>
+				<div class="avatar-container-text_p">
+					<p>Подберу для вас самые лучшие предложения. Mои услуги абсолютно бесплатны.</p>
+				</div>
+			</div>
+		</div>
+		<div class="service-container">
+			<div class="service-container-caption">
+				<h2>Услуг</h2>
+			</div>
+			<div class="service-container-grafix">
+				<div class="service-container-grafix-left-colum">
+					<p>Ручное бронирование</p>
+					<p>Пакетные туры</p>
+					<p>Отели</p>
+				</div>
+				<div class="service-container-grafix-center-colum">
+					<div class="first"></div>
+					<div class="second"></div>
+					<div class="third"></div>
+				</div>
+				<div class="service-container-grafix-right-colum">
+					<p>11</p>
+					<p>3</p>
+					<p>1</p>
+				</div>
+			</div>
+			<div class="service-container-result">
+				<span>Всего</span>
+				<span>15</span>
+			</div>
+		</div>
+		<div class="reviews-container">
+			<div class="reviews-container-caption">
+				<div>
+					<h3>Последние отзывы</h3>
+					<a href="#">Все отзывы</a>
+				</div>
+				<div>
+					<p><i class="fa fa-heart"></i>131</p>
+					<p><i class="fa fa-comment"></i>14</p>
+				</div>
+			</div>
+			<div class="message" id="message">
+				<div class="message-name">
+					<h4>Самуил</h4>
+					<p>13 октября 2011</p>
+				</div>
+				<div class="message-body">
+					<p>Привет, Верунь! ниче себе ты крутая. фотка класс!!!!</p>
+				</div>
+				<div class="message-name">
+					<h4>Лилия Семёновна</h4>
+					<p>14 октября 2011</p>
+				</div>
+				<div class="message-body">
+					<p>Вероника, здравствуйте! Есть такой вопрос: Особый вид куниц жизненно стабилизирует кинетический момент, это и есть всемирно известный центр огранки алмазов и торговли бриллиантами?</p>
+				</div>
+				<div class="message-name">
+					<h4>Лилия Семёновна</h4>
+					<p>14 октября 2011</p>
+				</div>
+				<div class="message-body">
+					<p>Вероника, здравствуйте! Есть такой вопрос: Особый вид куниц жизненно стабилизирует кинетический момент?</p>
+				</div>
+			</div>
+		</div>
+		<div class="container-send" id="send">
+				<textarea></textarea>
+				<button id="submit">Написать консультанту</button>
+		</div>
+	</div>
+	<script type="text/javascript">
+		
+		var container = document.getElementById('message');
+		var button = document.getElementById('submit');
+		var send = document.getElementById('send');
+
+		button.addEventListener('click', function (e) {
+
+			var message = send.children[0];
+
+			if (!message.value) {
+				message.classList.add("error");
+			} else {
+				message.classList.remove("error");
+
+				var bodyMessage = document.createElement('div');
+				var bodyName = document.createElement('div');
+				var p = document.createElement('p');
+
+				bodyMessage.classList.add("message-body");
+				bodyName.classList.add("message-name");
+
+				bodyName.innerHTML = '<h4>Имя пользователя</h4><p>Дата</p>';
+				p.innerHTML = message.value;
+
+				container.appendChild(bodyName);
+				container.appendChild(bodyMessage);
+				bodyMessage.appendChild(p);
+			}
+		});
+
+
+
+
+		// Вариант кода в случаи с событием submit для формы.
+
+		// var container = document.getElementById('message');
+		// var form = document.getElementById('form');
+		// var send = document.getElementById('send');
+
+		// form.addEventListener('submit', function (event) {
+
+		// 	var message = form.children[0];
+
+		// 	if (!message.value) {
+		// 		message.classList.add("error");
+		// 		event.preventDefault();
+		// 	} else {
+		// 		message.classList.remove("error");
+
+		// 		var bodyMessage = document.createElement('div');
+		// 		var bodyName = document.createElement('div');
+		// 		var p = document.createElement('p');
+
+		// 		bodyMessage.classList.add("message-body");
+		// 		bodyName.classList.add("message-name");
+
+		// 		bodyName.innerHTML = '<h4>Имя пользователя</h4><p>Дата</p>';
+		// 		p.innerHTML = message.value;
+
+		// 		container.appendChild(bodyName);
+		// 		container.appendChild(bodyMessage);
+		// 		bodyMessage.appendChild(p);
+		// 	}
+		// });
+	</script>
+</body>
+</html>
