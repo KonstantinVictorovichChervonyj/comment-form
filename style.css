@@ -1,7 +1,11 @@
-/*@font-face {
-    font-family: Font;
-    src: url(fonts/Font.otf);
-}*/
+@font-face {
+    font-family: 'Arial - Bold MT';
+    src: url(fonts/arialbd.ttf);
+}
+@font-face {
+    font-family: 'Arial MT';
+    src: url(fonts/Aria_l.ttf);
+}
 body {
 	margin: 0;
 }
@@ -12,37 +16,48 @@ body {
 }
 .avatar-container {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: center;
 }
 .avatar-container-text h1 {
 	color: #333333;
-	font-size: 16px;
-	font-family: "Arial - Bold MT";
-	margin: 0 0 0 10px;
+    font-size: 18px;
+    font-family: "Arial - Bold MT";
+    margin: 0 0 0 28px;
 }
 .avatar-container-text p {
 	color: #808080;
-	font-family: "Arial - Bold MT";
-	font-size: 12px;
-	margin: 5px 0 5px 10px;
+    font-family: "Arial - Bold MT";
+    font-size: 13px;
+    margin: 5px 0 5px 28px;
 }
 .avatar-container-text_p p {
 	color: #333333;
 	font-family: "Arial MT";
-	font-size: 14px;
+	font-size: 15px;
 	margin: 0;
-	padding: 10px;
+	padding: 10px 10px 10px 30px;
 }
 .avatar-container-text_p {
-	width: 300px;
+	width: 380px;
 	box-shadow: 0 0 0 1px rgba(60, 44, 0, 0.25);
 	background-color: #fffbc8;
 }
+.avatar-container img {
+	position: relative;
+	right: -16px;
+	top: 9px;
+}
+.service {
+	width: 330px;
+}
 .service-container {
-	width: 302px;
-	margin-left: auto;
-	margin-right: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.spigot {
+	width: 170px;
 }
 .service-container-caption {
 	display: flex;
@@ -60,36 +75,36 @@ body {
 	display: flex;
 	border-top: solid 1px #cccccc;
 	border-bottom: solid 1px #cccccc;
-	padding: 10px 0 0 0;
+	padding: 10px 0 7px 0;
 }
 .service-container-grafix-left-colum {
 	display: flex;
 	flex-direction: column;
 }
 .service-container-grafix-left-colum p {
-	margin: 3px 0 7px 0;
-	color: #333333;
-	font-family: "Arial MT";
-	font-size: 13px;
+	margin: 4px 0 7px 10px;
+    color: #333333;
+    font-family: "Arial MT";
+    font-size: 13px;
 }
 .service-container-grafix-center-colum .first {
 	width: 219px;
     height: 24px;
     background-color: #3cb305;
     opacity: 0.4;
-    margin: 0 0 2px -121px;
+    margin: 0 0 2px -144px;
 }
 .service-container-grafix-center-colum {
 	display: flex;
 	flex-direction: column;
-	width: 50%;
+	width: 48%;
 }
 .service-container-grafix-center-colum .second {
 	width: 54px;
 	height: 24px;
 	background-color: #30b6ee;
 	opacity: 0.4;
-	margin: 0 0 2px -121px;
+	margin: 0 0 2px -144px;
 }
 .service-container-grafix-right-colum {
 	display: flex;
@@ -101,7 +116,7 @@ body {
 	height: 24px;
 	background-color: #30b6ee;
 	opacity: 0.4;
-	margin: 0 0 2px -121px;
+	margin: 0 0 2px -144px;
 }
 .service-container-result {
 	display: flex;
@@ -109,7 +124,7 @@ body {
 	align-items: center;
 }
 .service-container-grafix-right-colum p {
-	margin: 3px 0 5px 0;
+	margin: 5px 0 5px 0;
 	color: #333333;
 	font-family: "Arial - Bold MT";
 	font-size: 13px;
@@ -155,7 +170,7 @@ body {
 }
 .message {
 	margin: 0 auto;
-    width: 60%;
+    width: 73%;
 }
 .message-name {
 	display: flex;
@@ -206,7 +221,7 @@ body {
 	flex-direction: column;
 }
 .container-send textarea {
-	width: 70%;
+	width: 73%;
 	height: 65px;
 	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.44);
 	/*border: 1px solid #000000;*/
@@ -230,28 +245,315 @@ body {
 .error {
 	border: 1px solid red;
 }
-@media screen and (max-width:435px) {
+@media screen and (max-width:434px) {
 	.avatar-container img {
-		height: 90px;
-		width: 75px;
+		height: 100px;
+	    width: 100px;
+	    position: relative;
+	    right: -16px;
+	    top: 9px;
 	}
-	.avatar-container-text_p {
-	    width: 250px;
-	    box-shadow: 0 0 0 1px rgba(60, 44, 0, 0.25);
-	    background-color: #fffbc8;
+		.avatar-container-text h1 {
+	    color: #333333;
+	    font-size: 16px;
+	    font-family: "Arial - Bold MT";
+	    margin: 8px 0 0 25px;
+	}
+		.avatar-container-text p {
+	    color: #808080;
+	    font-family: "Arial - Bold MT";
+	    font-size: 12px;
+	    margin: 5px 0 5px 25px;
 	}
 	.avatar-container-text_p p {
 	    color: #333333;
 	    font-family: "Arial MT";
-	    font-size: 12px;
+	    font-size: 12px;;
 	    margin: 0;
-	    padding: 10px;
+	    padding: 7px 5px 7px 25px;
 	}
-	.service-container {
-	    margin: 0 auto;
+	.avatar-container-text_p {
+	    width: 96%;
+	    box-shadow: 0 0 0 1px rgba(60, 44, 0, 0.25);
+	    background-color: #fffbc8;
 	}
 	.message {
 	    margin: 0 auto;
-	    width: 80%;
+	    width: 90%;
+	}
+	.service {
+	    width: 287px;
+	}
+	.spigot {
+	    width: 112px;
+	}
+	.service-container-grafix-center-colum .first {
+	    width: 156px;
+	    height: 22px;
+	    background-color: #3cb305;
+	    opacity: 0.4;
+	    margin: 0 0 2px -129px;
+	}
+	.service-container-grafix-center-colum .second {
+	    width: 54px;
+	    height: 22px;
+	    background-color: #30b6ee;
+	    opacity: 0.4;
+	    margin: 0 0 2px -129px;
+	}
+	.service-container-grafix-center-colum .third {
+	    width: 36px;
+	    height: 22px;
+	    background-color: #30b6ee;
+	    opacity: 0.4;
+	    margin: 0 0 2px -129px;
+	}
+	.service-container-grafix-left-colum p {
+	   margin: 5px 0 4px 5px;
+	   color: #333333;
+	   font-family: "Arial MT";
+	   font-size: 12px;
+	}
+	.service-container-grafix {
+	    display: flex;
+	    border-top: solid 1px #cccccc;
+	    border-bottom: solid 1px #cccccc;
+	    padding: 5px 0 3px 0;
+	}
+	.service-container-result span {
+	    color: #333333;
+	    font-family: "Arial - Bold MT";
+	    font-size: 13px;
+	}
+	.service-container-grafix-center-colum {
+	    display: flex;
+	    flex-direction: column;
+	    width: 46%;
+	}
+	.service-container-grafix-right-colum p {
+	    margin: 5px 0 5px 0;
+	    color: #333333;
+	    font-family: "Arial - Bold MT";
+	    font-size: 12px;
+	}
+	.reviews-container-caption div h3 {
+	    color: #333333;
+	    font-family: "Arial - Bold MT";
+	    font-size: 14px;
+    	margin-left: -2px;
+	}
+	.reviews-container-caption div p {
+	    color: #333333;
+	    font-family: "Arial MT";
+	    font-size: 12px;
+	    margin-left: 30px;
+	}
+	.reviews-container-caption div a {
+	    color: #47b8f0;
+	    font-family: "Arial - Bold MT";
+	    font-size: 11px;
+	    margin-left: 14px;
+	}
+	.container-send textarea {
+	    width: 90%;
+	    height: 65px;
+	    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.44);
+	    background-color: #ffffff;
+	}
+	.container-send button {
+	    width: 235px;
+	    height: 44px;
+	    margin-top: 20px;
+	    background-color: #fdd639;
+	    border: none;
+	    border-radius: 20px;
+	    color: #333333;
+	    font-family: "PT Sans";
+	    font-size: 16px;
+	    outline: 0;
+	}
+}
+@media screen and (max-width:414px) {
+	.service {
+	    width: 277px;
+	}
+	.service-container-grafix-center-colum {
+	    display: flex;
+	    flex-direction: column;
+	    width: 44%;
+	}
+	.reviews-container-caption div h3 {
+	    color: #333333;
+	    font-family: "Arial - Bold MT";
+	    font-size: 14px;
+	    margin-left: 0px;
+	}
+	.reviews-container-caption div p {
+    color: #333333;
+    font-family: "Arial MT";
+    font-size: 12px;
+    margin-left: 20px;
+}
+}
+@media screen and (max-width:375px) {
+	.service-container-grafix-center-colum {
+	    display: flex;
+	    flex-direction: column;
+	    width: 42%;
+	}
+	.service {
+	    width: 242px;
+	}
+	.service-container-grafix-center-colum {
+	    display: flex;
+	    flex-direction: column;
+	    width: 36%;
+	}
+	.avatar-container img {
+	    height: 105px;
+	    width: 105px;
+	    position: relative;
+	    right: -22px;
+	    top: 9px;
+	}
+	.avatar-container-text_p p {
+	    color: #333333;
+	    font-family: "Arial MT";
+	    font-size: 10px;
+	    margin: 0;
+	    padding: 7px 5px 7px 25px;
+	}
+	.reviews-container-caption div h3 {
+	    color: #333333;
+	    font-family: "Arial - Bold MT";
+	    font-size: 14px;
+	    margin-left: 0px;
+	}
+	.reviews-container-caption div p {
+	    color: #333333;
+	    font-family: "Arial MT";
+	    font-size: 12px;
+	    margin-left: 10px;
+	}
+}
+@media screen and (max-width:360px) {
+	.avatar-container img {
+		height: 100px;
+	    width: 100px;
+	    position: relative;
+	    right: -15px;
+	    top: 9px;
+	}
+		.avatar-container-text h1 {
+	    color: #333333;
+	    font-size: 16px;
+	    font-family: "Arial - Bold MT";
+	    margin: 8px 0 0 25px;
+	}
+		.avatar-container-text p {
+	    color: #808080;
+	    font-family: "Arial - Bold MT";
+	    font-size: 12px;
+	    margin: 5px 0 5px 25px;
+	}
+	.avatar-container-text_p p {
+	    color: #333333;
+	    font-family: "Arial MT";
+	    font-size: 10px;
+	    margin: 0;
+	    padding: 7px 5px 7px 25px;
+	}
+	.avatar-container-text_p {
+	    width: 96%;
+	    box-shadow: 0 0 0 1px rgba(60, 44, 0, 0.25);
+	    background-color: #fffbc8;
+	}
+	.message {
+	    margin: 0 auto;
+	    width: 90%;
+	}
+	.service {
+	    width: 225px;
+	}
+	.spigot {
+	    width: 112px;
+	}
+	.service-container-grafix-center-colum .first {
+	    width: 156px;
+	    height: 22px;
+	    background-color: #3cb305;
+	    opacity: 0.4;
+	    margin: 0 0 2px -93px;
+	}
+	.service-container-grafix-center-colum .second {
+	    width: 54px;
+	    height: 22px;
+	    background-color: #30b6ee;
+	    opacity: 0.4;
+	    margin: 0 0 2px -93px;
+	}
+	.service-container-grafix-center-colum .third {
+	    width: 36px;
+	    height: 22px;
+	    background-color: #30b6ee;
+	    opacity: 0.4;
+	    margin: 0 0 2px -93px;
+	}
+	.service-container-grafix-left-colum p {
+	   margin: 5px 0 9px 0;
+	   color: #333333;
+	   font-family: "Arial MT";
+	   font-size: 9px;
+	}
+	.service-container-grafix {
+	    display: flex;
+	    border-top: solid 1px #cccccc;
+	    border-bottom: solid 1px #cccccc;
+	    padding: 5px 0 3px 0;
+	}
+	.service-container-result span {
+	    color: #333333;
+	    font-family: "Arial - Bold MT";
+	    font-size: 13px;
+	}
+	.service-container-grafix-center-colum {
+	    display: flex;
+	    flex-direction: column;
+	    width: 46%;
+	}
+	.service-container-grafix-right-colum p {
+	    margin: 5px 0 5px 0;
+	    color: #333333;
+	    font-family: "Arial - Bold MT";
+	    font-size: 12px;
+	}
+	.reviews-container-caption div h3 {
+	    color: #333333;
+	    font-family: "Arial - Bold MT";
+	    font-size: 13px;
+	}
+	.reviews-container-caption div a {
+	    color: #47b8f0;
+	    font-family: "Arial - Bold MT";
+	    font-size: 11px;
+	    margin-left: 14px;
+	}
+	.container-send textarea {
+	    width: 90%;
+	    height: 65px;
+	    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.44);
+	    background-color: #ffffff;
+	}
+	.container-send button {
+	    width: 235px;
+	    height: 44px;
+	    margin-top: 20px;
+	    background-color: #fdd639;
+	    border: none;
+	    border-radius: 20px;
+	    color: #333333;
+	    font-family: "PT Sans";
+	    font-size: 16px;
+	    outline: 0;
 	}
 }
